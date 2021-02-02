@@ -1,0 +1,41 @@
+version: "2.0"
+
+stories:
+- story: test happy1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: ask_carnumber
+  - action: utter_carnumber
+  - intent: ask_location
+  - action: utter_location
+  - intent: affirm
+  - action: utter_thanks
+
+- story: test unhappy
+  steps:
+  - intent: ask_location
+  - action: utter_location
+  - intent: not_him
+  - action: utter_sorry
+
+- story: unhappy2
+  steps:
+  - intent: ask_carnumber
+  - action: utter_carnumber
+  - intent: reject
+  - action: utter_angry
+
+- story: unhappy3
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: reject
+  - action: utter_angry
+
+- story: test happy2
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: affirm
+  - action: utter_thanks

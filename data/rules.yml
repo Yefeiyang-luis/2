@@ -1,0 +1,19 @@
+version: "2.0"
+
+rules:
+
+
+- rule: user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: say human handel
+  steps:
+  - intent: require_man
+  - action: utter_human
+
+- rule: say again
+  steps:
+  - intent: again
+  - action: utter_again

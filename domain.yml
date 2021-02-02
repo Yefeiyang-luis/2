@@ -1,0 +1,45 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- bot_challenge
+- ask_carnumber
+- ask_location
+- require_man
+- again
+- not_him
+- affirm
+- reject
+responses:
+  utter_welcome:
+  - text: 您好。这里是幺幺四移车热线，您的车影响了其他车辆通行，请移一下车好吗？
+  - text: 您好。这里是幺幺四移车热线，您的车违章停放，请移一下车好吗？
+  - text: 您好。这里是幺幺四移车热线，您的车挡住了安全通道，请移一下车好吗？
+  - text: 您好。这里是幺幺四移车热线，您的车未按规定停靠，请移一下车好吗？
+  utter_carnumber:
+  - text: 是这样的，有市民反映，车牌是，浙H。尾号是，2，1，J，的车子,违章停放，请移一下车好吗？
+  utter_location:
+  - text: 车停在龙游县灵江花园，违章停放，请移一下车好吗？
+  utter_time:
+  - text: 那您大概多久可以移一下车呢？
+  - text: 您大概要几分钟可以挪车呢?
+  utter_again:
+  - text: 车牌浙H尾号是，2，1，J，违章停放在龙游县灵江花园,请尽快移车！
+  utter_sorry:
+  - text: 抱歉打扰您了，祝您生活愉快，再见。
+  - text: 非常抱歉，再见。
+  utter_iamabot:
+  - text: 我是个基于Rasa开发的机器人.
+  - text: 我是爱客智能语音助手
+  utter_thanks:
+  - text: 谢谢您的配合，祝您生活愉快。
+  - text: 好的，谢谢您的配合。
+  utter_angry:
+  - text: 还是请您配合一下，必要时将使用拖车。
+  utter_human:
+  - text: 正在帮你转接人工服务。
+  utter_default:
+  - text: 抱歉，我没听清楚，请您再说一遍！
